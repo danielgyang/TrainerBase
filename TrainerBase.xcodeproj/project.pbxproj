@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		228B6CDD0B88C516C4E20E73 /* Pods_TrainerBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BE3BF32990E86CAC6DA435 /* Pods_TrainerBase.framework */; };
 		AE9ECA1B239B633500FD4518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1A239B633500FD4518 /* AppDelegate.swift */; };
 		AE9ECA1D239B633500FD4518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1C239B633500FD4518 /* SceneDelegate.swift */; };
-		AE9ECA1F239B633500FD4518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1E239B633500FD4518 /* ViewController.swift */; };
+		AE9ECA1F239B633500FD4518 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1E239B633500FD4518 /* HomeViewController.swift */; };
 		AE9ECA22239B633500FD4518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ECA20239B633500FD4518 /* Main.storyboard */; };
 		AE9ECA24239B633600FD4518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9ECA23239B633600FD4518 /* Assets.xcassets */; };
 		AE9ECA27239B633600FD4518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ECA25239B633600FD4518 /* LaunchScreen.storyboard */; };
+		AE9ECA2F239C430000FD4518 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA2E239C430000FD4518 /* ClientsViewController.swift */; };
+		AE9ECA33239C4CB500FD4518 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA32239C4CB500FD4518 /* ClientDetailViewController.swift */; };
+		AE9ECA35239C61C400FD4518 /* ClientSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA34239C61C400FD4518 /* ClientSessionViewController.swift */; };
+		AE9ECA39239C861200FD4518 /* ClientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA38239C861200FD4518 /* ClientInfo.swift */; };
+		AE9ECA3D239CC49700FD4518 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA3C239CC49700FD4518 /* ClassesViewController.swift */; };
+		AE9ECA3F239CCC2800FD4518 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA3E239CCC2800FD4518 /* Class.swift */; };
+		AE9ECA41239CCC6800FD4518 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA40239CCC6800FD4518 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82BE3BF32990E86CAC6DA435 /* Pods_TrainerBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainerBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9ECA17239B633500FD4518 /* TrainerBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainerBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9ECA1A239B633500FD4518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9ECA1C239B633500FD4518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE9ECA1E239B633500FD4518 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE9ECA1E239B633500FD4518 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE9ECA21239B633500FD4518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE9ECA23239B633600FD4518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE9ECA26239B633600FD4518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE9ECA28239B633600FD4518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9ECA2E239C430000FD4518 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
+		AE9ECA32239C4CB500FD4518 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
+		AE9ECA34239C61C400FD4518 /* ClientSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSessionViewController.swift; sourceTree = "<group>"; };
+		AE9ECA38239C861200FD4518 /* ClientInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfo.swift; sourceTree = "<group>"; };
+		AE9ECA3C239CC49700FD4518 /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
+		AE9ECA3E239CCC2800FD4518 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		AE9ECA40239CCC6800FD4518 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C7429F3C7D64FCAE71CA8F64 /* Pods-TrainerBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainerBase.release.xcconfig"; path = "Target Support Files/Pods-TrainerBase/Pods-TrainerBase.release.xcconfig"; sourceTree = "<group>"; };
+		F14CAFBBC64E1A3B041A59EC /* Pods-TrainerBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainerBase.debug.xcconfig"; path = "Target Support Files/Pods-TrainerBase/Pods-TrainerBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228B6CDD0B88C516C4E20E73 /* Pods_TrainerBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B9DB9CC85910AB3352C9D45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82BE3BF32990E86CAC6DA435 /* Pods_TrainerBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91A8FD90683D0C2DEFAACE28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F14CAFBBC64E1A3B041A59EC /* Pods-TrainerBase.debug.xcconfig */,
+				C7429F3C7D64FCAE71CA8F64 /* Pods-TrainerBase.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE9ECA0E239B633500FD4518 = {
 			isa = PBXGroup;
 			children = (
 				AE9ECA19239B633500FD4518 /* TrainerBase */,
 				AE9ECA18239B633500FD4518 /* Products */,
+				91A8FD90683D0C2DEFAACE28 /* Pods */,
+				2B9DB9CC85910AB3352C9D45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +96,14 @@
 			children = (
 				AE9ECA1A239B633500FD4518 /* AppDelegate.swift */,
 				AE9ECA1C239B633500FD4518 /* SceneDelegate.swift */,
-				AE9ECA1E239B633500FD4518 /* ViewController.swift */,
+				AE9ECA38239C861200FD4518 /* ClientInfo.swift */,
+				AE9ECA40239CCC6800FD4518 /* Session.swift */,
+				AE9ECA3E239CCC2800FD4518 /* Class.swift */,
+				AE9ECA1E239B633500FD4518 /* HomeViewController.swift */,
+				AE9ECA2E239C430000FD4518 /* ClientsViewController.swift */,
+				AE9ECA32239C4CB500FD4518 /* ClientDetailViewController.swift */,
+				AE9ECA34239C61C400FD4518 /* ClientSessionViewController.swift */,
+				AE9ECA3C239CC49700FD4518 /* ClassesViewController.swift */,
 				AE9ECA20239B633500FD4518 /* Main.storyboard */,
 				AE9ECA23239B633600FD4518 /* Assets.xcassets */,
 				AE9ECA25239B633600FD4518 /* LaunchScreen.storyboard */,
@@ -74,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE9ECA2B239B633600FD4518 /* Build configuration list for PBXNativeTarget "TrainerBase" */;
 			buildPhases = (
+				FE4282828BBF4BEC719BC975 /* [CP] Check Pods Manifest.lock */,
 				AE9ECA13239B633500FD4518 /* Sources */,
 				AE9ECA14239B633500FD4518 /* Frameworks */,
 				AE9ECA15239B633500FD4518 /* Resources */,
+				E47A7516834D0D58A6C38F46 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +180,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E47A7516834D0D58A6C38F46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainerBase/Pods-TrainerBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainerBase/Pods-TrainerBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrainerBase/Pods-TrainerBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE4282828BBF4BEC719BC975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrainerBase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE9ECA13239B633500FD4518 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE9ECA1F239B633500FD4518 /* ViewController.swift in Sources */,
+				AE9ECA41239CCC6800FD4518 /* Session.swift in Sources */,
+				AE9ECA1F239B633500FD4518 /* HomeViewController.swift in Sources */,
 				AE9ECA1B239B633500FD4518 /* AppDelegate.swift in Sources */,
 				AE9ECA1D239B633500FD4518 /* SceneDelegate.swift in Sources */,
+				AE9ECA3F239CCC2800FD4518 /* Class.swift in Sources */,
+				AE9ECA3D239CC49700FD4518 /* ClassesViewController.swift in Sources */,
+				AE9ECA39239C861200FD4518 /* ClientInfo.swift in Sources */,
+				AE9ECA33239C4CB500FD4518 /* ClientDetailViewController.swift in Sources */,
+				AE9ECA35239C61C400FD4518 /* ClientSessionViewController.swift in Sources */,
+				AE9ECA2F239C430000FD4518 /* ClientsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +378,7 @@
 		};
 		AE9ECA2C239B633600FD4518 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14CAFBBC64E1A3B041A59EC /* Pods-TrainerBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +397,7 @@
 		};
 		AE9ECA2D239B633600FD4518 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7429F3C7D64FCAE71CA8F64 /* Pods-TrainerBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

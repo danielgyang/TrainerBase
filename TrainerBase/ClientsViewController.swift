@@ -39,6 +39,7 @@ class ClientsViewController: UIViewController {
         let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
         homeTab.clientsArray = clientsArray
         homeTab.reloadInputViews()
+        
     }
     
     @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -75,7 +76,11 @@ extension ClientsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = clientsTableView.dequeueReusableCell(withIdentifier: "ClientCell", for: indexPath)
         cell.textLabel?.text = clientsArray[indexPath.row].name
-        cell.detailTextLabel?.text = "Age: \(clientsArray[indexPath.row].age)"
+        if clientsArray[indexPath.row].age != "" {
+            cell.detailTextLabel?.text = "Age: \(clientsArray[indexPath.row].age)"
+        } else {
+            cell.detailTextLabel?.text = ""
+        }
         return cell
     }
     

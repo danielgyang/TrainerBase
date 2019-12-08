@@ -17,12 +17,20 @@ class HomeViewController: UIViewController {
     let date = Date()
     let formatter = DateFormatter()
     var clientsArray = [ClientInfo]()
+    var classesArray = [ClassInfo]()
+    var clientsTodayArray = [ClientInfo]()
+    var classesTodayArray = [ClassInfo]()
+    var classesTimeArray = [String]()
+    var clientsTimeArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        clientsTodayArray = [ClientInfo]()
+        classesTodayArray = [ClassInfo]()
+        
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
         
@@ -51,20 +59,39 @@ class HomeViewController: UIViewController {
         
         var sessionsToday = 0
         for client in clientsArray {
+            var counter = 0
             for session in client.sessionsArray {
                 if session.dayOfWeek == day {
                     sessionsToday += 1
+                    clientsTodayArray.append(client)
+                    clientsTimeArray.append(client.sessionsArray[counter].timeOfDay)
                 }
+                counter += 1
+            }
+        }
+        for classSession in classesArray {
+            var counter = 0
+            for session in classSession.sessionsArray {
+                if session.dayOfWeek == day {
+                    sessionsToday += 1
+                    classesTodayArray.append(classSession)
+                    classesTimeArray.append(classSession.sessionsArray[counter].timeOfDay)
+                }
+                counter += 1
             }
         }
         if sessionsToday == 1 {
-            scheduledForTodayLabel.text = "sessions scheduled for today!"
+            scheduledForTodayLabel.text = "session scheduled for today!"
         } else {
             scheduledForTodayLabel.text = "sessions scheduled for today!"
         }
         numberOfSessionsImageView.image = UIImage(systemName: "\(sessionsToday).circle.fill")
     }
-
+    
+    @IBAction func todayTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "ShowToday", sender: self)
+    }
+    
     func getDayOfWeek(_ today: String) -> Int! {
         let formatter  = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
@@ -74,5 +101,17 @@ class HomeViewController: UIViewController {
         return weekDay
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ShowToday":
+            let destination = segue.destination as! SessionsTodayViewController
+            destination.clientsTodayArray = clientsTodayArray
+            destination.classesTodayArray = classesTodayArray
+            destination.clientsTimeArray = clientsTimeArray
+            destination.classesTimeArray = classesTimeArray
+        default:
+            print("Error while performing home segue to today's sessions")
+        }
+    }
 }
 

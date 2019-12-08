@@ -1,5 +1,5 @@
 //
-//  Class.swift
+//  ClassInfo.swift
 //  TrainerBase
 //
 //  Created by Daniel Yang on 12/8/19.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-class Class {
+class ClassInfo {
     var name = ""
-    var sessions = [Session]()
+    var type = ""
+    var level = ""
+    var sessionsArray = [Session]()
 }

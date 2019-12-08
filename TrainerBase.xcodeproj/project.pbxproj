@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		228B6CDD0B88C516C4E20E73 /* Pods_TrainerBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BE3BF32990E86CAC6DA435 /* Pods_TrainerBase.framework */; };
+		AE0EF301239CE37100164323 /* ClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EF300239CE37100164323 /* ClassInfo.swift */; };
+		AE0EF303239CE3F600164323 /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EF302239CE3F600164323 /* ClassDetailViewController.swift */; };
+		AE0EF305239CF2E200164323 /* SessionsTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EF304239CF2E200164323 /* SessionsTodayViewController.swift */; };
 		AE9ECA1B239B633500FD4518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1A239B633500FD4518 /* AppDelegate.swift */; };
 		AE9ECA1D239B633500FD4518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1C239B633500FD4518 /* SceneDelegate.swift */; };
 		AE9ECA1F239B633500FD4518 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA1E239B633500FD4518 /* HomeViewController.swift */; };
@@ -16,15 +19,17 @@
 		AE9ECA27239B633600FD4518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ECA25239B633600FD4518 /* LaunchScreen.storyboard */; };
 		AE9ECA2F239C430000FD4518 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA2E239C430000FD4518 /* ClientsViewController.swift */; };
 		AE9ECA33239C4CB500FD4518 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA32239C4CB500FD4518 /* ClientDetailViewController.swift */; };
-		AE9ECA35239C61C400FD4518 /* ClientSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA34239C61C400FD4518 /* ClientSessionViewController.swift */; };
+		AE9ECA35239C61C400FD4518 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA34239C61C400FD4518 /* SessionViewController.swift */; };
 		AE9ECA39239C861200FD4518 /* ClientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA38239C861200FD4518 /* ClientInfo.swift */; };
 		AE9ECA3D239CC49700FD4518 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA3C239CC49700FD4518 /* ClassesViewController.swift */; };
-		AE9ECA3F239CCC2800FD4518 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA3E239CCC2800FD4518 /* Class.swift */; };
 		AE9ECA41239CCC6800FD4518 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ECA40239CCC6800FD4518 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		82BE3BF32990E86CAC6DA435 /* Pods_TrainerBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainerBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0EF300239CE37100164323 /* ClassInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfo.swift; sourceTree = "<group>"; };
+		AE0EF302239CE3F600164323 /* ClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
+		AE0EF304239CF2E200164323 /* SessionsTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTodayViewController.swift; sourceTree = "<group>"; };
 		AE9ECA17239B633500FD4518 /* TrainerBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainerBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9ECA1A239B633500FD4518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9ECA1C239B633500FD4518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,10 +40,9 @@
 		AE9ECA28239B633600FD4518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9ECA2E239C430000FD4518 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 		AE9ECA32239C4CB500FD4518 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
-		AE9ECA34239C61C400FD4518 /* ClientSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSessionViewController.swift; sourceTree = "<group>"; };
+		AE9ECA34239C61C400FD4518 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		AE9ECA38239C861200FD4518 /* ClientInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfo.swift; sourceTree = "<group>"; };
 		AE9ECA3C239CC49700FD4518 /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
-		AE9ECA3E239CCC2800FD4518 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		AE9ECA40239CCC6800FD4518 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C7429F3C7D64FCAE71CA8F64 /* Pods-TrainerBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainerBase.release.xcconfig"; path = "Target Support Files/Pods-TrainerBase/Pods-TrainerBase.release.xcconfig"; sourceTree = "<group>"; };
 		F14CAFBBC64E1A3B041A59EC /* Pods-TrainerBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainerBase.debug.xcconfig"; path = "Target Support Files/Pods-TrainerBase/Pods-TrainerBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,12 +102,14 @@
 				AE9ECA1C239B633500FD4518 /* SceneDelegate.swift */,
 				AE9ECA38239C861200FD4518 /* ClientInfo.swift */,
 				AE9ECA40239CCC6800FD4518 /* Session.swift */,
-				AE9ECA3E239CCC2800FD4518 /* Class.swift */,
+				AE0EF300239CE37100164323 /* ClassInfo.swift */,
 				AE9ECA1E239B633500FD4518 /* HomeViewController.swift */,
 				AE9ECA2E239C430000FD4518 /* ClientsViewController.swift */,
 				AE9ECA32239C4CB500FD4518 /* ClientDetailViewController.swift */,
-				AE9ECA34239C61C400FD4518 /* ClientSessionViewController.swift */,
+				AE9ECA34239C61C400FD4518 /* SessionViewController.swift */,
 				AE9ECA3C239CC49700FD4518 /* ClassesViewController.swift */,
+				AE0EF302239CE3F600164323 /* ClassDetailViewController.swift */,
+				AE0EF304239CF2E200164323 /* SessionsTodayViewController.swift */,
 				AE9ECA20239B633500FD4518 /* Main.storyboard */,
 				AE9ECA23239B633600FD4518 /* Assets.xcassets */,
 				AE9ECA25239B633600FD4518 /* LaunchScreen.storyboard */,
@@ -228,14 +234,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9ECA41239CCC6800FD4518 /* Session.swift in Sources */,
+				AE0EF301239CE37100164323 /* ClassInfo.swift in Sources */,
 				AE9ECA1F239B633500FD4518 /* HomeViewController.swift in Sources */,
 				AE9ECA1B239B633500FD4518 /* AppDelegate.swift in Sources */,
 				AE9ECA1D239B633500FD4518 /* SceneDelegate.swift in Sources */,
-				AE9ECA3F239CCC2800FD4518 /* Class.swift in Sources */,
 				AE9ECA3D239CC49700FD4518 /* ClassesViewController.swift in Sources */,
 				AE9ECA39239C861200FD4518 /* ClientInfo.swift in Sources */,
 				AE9ECA33239C4CB500FD4518 /* ClientDetailViewController.swift in Sources */,
-				AE9ECA35239C61C400FD4518 /* ClientSessionViewController.swift in Sources */,
+				AE9ECA35239C61C400FD4518 /* SessionViewController.swift in Sources */,
+				AE0EF305239CF2E200164323 /* SessionsTodayViewController.swift in Sources */,
+				AE0EF303239CE3F600164323 /* ClassDetailViewController.swift in Sources */,
 				AE9ECA2F239C430000FD4518 /* ClientsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

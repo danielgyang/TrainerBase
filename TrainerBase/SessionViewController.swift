@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClientSessionViewController: UIViewController {
+class SessionViewController: UIViewController {
     @IBOutlet weak var dayPickerView: UIPickerView!
     @IBOutlet weak var timePickerView: UIDatePicker!
     var dayOfWeek = ""
@@ -45,7 +45,7 @@ class ClientSessionViewController: UIViewController {
     }
 }
 
-extension ClientSessionViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension SessionViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

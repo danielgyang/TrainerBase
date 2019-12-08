@@ -14,6 +14,4 @@ class ClientInfo {
     var sex = ""
     var email = ""
     var sessionsArray = [Session]()
-    
-
 }

@@ -41,12 +41,12 @@ class ClientDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "ShowSession":
-            let destination = segue.destination as! ClientSessionViewController
+        case "ShowClientSession":
+            let destination = segue.destination as! SessionViewController
             let selectedIndex = clientScheduleTableView.indexPathForSelectedRow!
             destination.dayOfWeek = clientInfo.sessionsArray[selectedIndex.row].dayOfWeek
             destination.timeOfDay = clientInfo.sessionsArray[selectedIndex.row].timeOfDay
-        case "UnwindFromDetailSave":
+        case "UnwindFromClientDetailSave":
             clientInfo.name = clientNameTextField.text ?? ""
             clientInfo.age = clientAgeTextField.text ?? ""
             clientInfo.sex = clientSexTextField.text ?? ""
@@ -68,7 +68,7 @@ class ClientDetailViewController: UIViewController {
     }
     
     @IBAction func unwindFromClientSessionViewController(segue: UIStoryboardSegue) {
-        let source = segue.source as! ClientSessionViewController
+        let source = segue.source as! SessionViewController
         let session = Session()
         session.dayOfWeek = source.dayOfWeek
         session.timeOfDay = source.timeOfDay
@@ -127,7 +127,7 @@ extension ClientDetailViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = clientScheduleTableView.dequeueReusableCell(withIdentifier: "ScheduleCell", for: indexPath)
+        let cell = clientScheduleTableView.dequeueReusableCell(withIdentifier: "ClientSessionCell", for: indexPath)
         cell.textLabel?.text = "\(clientInfo.sessionsArray[indexPath.row].dayOfWeek), \(clientInfo.sessionsArray[indexPath.row].timeOfDay)"
         return cell
     }

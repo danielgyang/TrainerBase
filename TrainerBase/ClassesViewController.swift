@@ -77,6 +77,8 @@ extension ClassesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = classesArray[indexPath.row].name
         if classesArray[indexPath.row].type != "" {
             cell.detailTextLabel?.text = classesArray[indexPath.row].type
+        } else {
+            cell.detailTextLabel?.text = ""
         }
         return cell
     }

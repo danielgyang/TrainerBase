@@ -24,6 +24,10 @@ class SessionsTodayViewController: UIViewController {
         classesTodayTableView.delegate = self
         classesTodayTableView.dataSource = self
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController!.popViewController(animated: true)
+    }
 }
 
 extension SessionsTodayViewController: UITableViewDataSource, UITableViewDelegate {

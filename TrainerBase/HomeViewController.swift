@@ -23,11 +23,17 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadFromUserDefaults()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         clientsTodayArray = [ClientInfo]()
         classesTodayArray = [ClassInfo]()
+        clientsTimeArray = [String]()
+        classesTimeArray = [String]()
+        
+        loadFromUserDefaults()
         
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
@@ -109,6 +115,28 @@ class HomeViewController: UIViewController {
             destination.classesTimeArray = classesTimeArray
         default:
             print("Error while performing home segue to today's sessions")
+        }
+    }
+    
+    func loadFromUserDefaults() {
+        guard let arrayEncoded1 = UserDefaults.standard.value(forKey: "clientsArray") as? Data else {
+            return
+        }
+        let decoder1 = JSONDecoder()
+        if let clientsArray = try? decoder1.decode(Array.self, from: arrayEncoded1) as [ClientInfo] {
+            self.clientsArray = clientsArray
+        } else {
+            print("ERROR: Couldn't decode clientsArray data read in from UserDefaults")
+        }
+        
+        guard let arrayEncoded2 = UserDefaults.standard.value(forKey: "classesArray") as? Data else {
+            return
+        }
+        let decoder2 = JSONDecoder()
+        if let classesArray = try? decoder2.decode(Array.self, from: arrayEncoded2) as [ClassInfo] {
+            self.classesArray = classesArray
+        } else {
+            print("ERROR: Couldn't decode classesArray data read in from UserDefaults")
         }
     }
 }

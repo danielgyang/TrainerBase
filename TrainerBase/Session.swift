@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Session {
+class Session: Codable {
     var dayOfWeek = ""
     var timeOfDay = ""
 }

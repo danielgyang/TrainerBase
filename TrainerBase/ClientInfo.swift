@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ClientInfo {
+class ClientInfo: Codable {
     var name = ""
     var age = ""
     var sex = ""

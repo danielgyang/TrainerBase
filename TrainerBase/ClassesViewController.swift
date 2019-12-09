@@ -21,6 +21,8 @@ class ClassesViewController: UIViewController {
         
         classesTableView.delegate = self
         classesTableView.dataSource = self
+        
+        loadFromUserDefaults()
     }
     
     @IBAction func unwindFromClassDetailViewController(segue: UIStoryboardSegue) {
@@ -39,6 +41,7 @@ class ClassesViewController: UIViewController {
         let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
         homeTab.classesArray = classesArray
         homeTab.reloadInputViews()
+        saveToUserDefaults()
     }
     
     @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -65,6 +68,27 @@ class ClassesViewController: UIViewController {
             }
         }
     }
+    
+    func saveToUserDefaults() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(classesArray) {
+            UserDefaults.standard.set(encoded, forKey: "classesArray")
+        } else {
+            print("ERROR: Saving encoded didn't work")
+        }
+    }
+    
+    func loadFromUserDefaults() {
+        guard let arrayEncoded = UserDefaults.standard.value(forKey: "classesArray") as? Data else {
+            return
+        }
+        let decoder = JSONDecoder()
+        if let classesArray = try? decoder.decode(Array.self, from: arrayEncoded) as [ClassInfo] {
+            self.classesArray = classesArray
+        } else {
+            print("ERROR: Couldn't decode data read in from UserDefaults")
+        }
+    }
 }
 
 extension ClassesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -88,11 +112,19 @@ extension ClassesViewController: UITableViewDelegate, UITableViewDataSource {
             classesArray.remove(at: indexPath.row)
             classesTableView.deleteRows(at: [indexPath], with: .fade)
         }
+        let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
+        homeTab.classesArray = classesArray
+        homeTab.reloadInputViews()
+        saveToUserDefaults()
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = classesArray[sourceIndexPath.row]
         classesArray.remove(at: sourceIndexPath.row)
         classesArray.insert(itemToMove, at: destinationIndexPath.row)
+        let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
+        homeTab.classesArray = classesArray
+        homeTab.reloadInputViews()
+        saveToUserDefaults()
     }
 }

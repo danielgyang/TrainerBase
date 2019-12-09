@@ -21,6 +21,8 @@ class ClientsViewController: UIViewController {
         
         clientsTableView.delegate = self
         clientsTableView.dataSource = self
+        
+        loadFromUserDefaults()
     }
     
     @IBAction func unwindFromClientDetailViewController(segue: UIStoryboardSegue) {
@@ -39,7 +41,7 @@ class ClientsViewController: UIViewController {
         let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
         homeTab.clientsArray = clientsArray
         homeTab.reloadInputViews()
-        
+        saveToUserDefaults()
     }
     
     @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -66,6 +68,27 @@ class ClientsViewController: UIViewController {
             }
         }
     }
+    
+    func saveToUserDefaults() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(clientsArray) {
+            UserDefaults.standard.set(encoded, forKey: "clientsArray")
+        } else {
+            print("ERROR: Saving encoded didn't work")
+        }
+    }
+    
+    func loadFromUserDefaults() {
+        guard let arrayEncoded = UserDefaults.standard.value(forKey: "clientsArray") as? Data else {
+            return
+        }
+        let decoder = JSONDecoder()
+        if let clientsArray = try? decoder.decode(Array.self, from: arrayEncoded) as [ClientInfo] {
+            self.clientsArray = clientsArray
+        } else {
+            print("ERROR: Couldn't decode data read in from UserDefaults")
+        }
+    }
 }
 
 extension ClientsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -89,11 +112,19 @@ extension ClientsViewController: UITableViewDelegate, UITableViewDataSource {
             clientsArray.remove(at: indexPath.row)
             clientsTableView.deleteRows(at: [indexPath], with: .fade)
         }
+        let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
+        homeTab.clientsArray = clientsArray
+        homeTab.reloadInputViews()
+        saveToUserDefaults()
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = clientsArray[sourceIndexPath.row]
         clientsArray.remove(at: sourceIndexPath.row)
         clientsArray.insert(itemToMove, at: destinationIndexPath.row)
+        let homeTab = tabBarController?.viewControllers![0].children[0] as! HomeViewController
+        homeTab.clientsArray = clientsArray
+        homeTab.reloadInputViews()
+        saveToUserDefaults()
     }
 }

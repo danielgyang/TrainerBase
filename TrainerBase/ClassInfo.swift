@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ClassInfo {
+class ClassInfo: Codable {
     var name = ""
     var type = ""
     var level = ""
